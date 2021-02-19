@@ -115,7 +115,7 @@ body,
 }
 
 .home-container {
-  height: 80vh;
+  height: 76vh;
 
   display: flex;
   flex-direction: column;
@@ -272,6 +272,234 @@ body,
   }
 }
 
+.vestuario-container .vestuario-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 800px;
+}
+
+.vestuario-content .vestuario-title {
+  display: flex;
+  justify-content: center;
+
+  font-size: 60px;
+  color: #C7B37D;
+  text-transform: uppercase;
+
+  margin: 30px 0 54px 0;
+}
+
+.field-card-projetos {
+  display: flex;
+  align-items: center;
+}
+
+.vestuario-content .vestuario-card {
+  display: flex;
+
+  width: 1180px;
+  height: 488px;
+  background-color: #C7B37D;
+
+  margin-left: 140px;
+  border-radius: 5px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.vestuario-content .vestuario-field-image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
+  height: 510px;
+  width: 410px;
+}
+
+.vestuario-content .vestuario-card-content {
+  padding: 40px 0;
+}
+
+.projetos-card-title {
+  width: 325px;
+  
+  color: #FFFFFF;
+
+  font-size: 60px;
+  text-transform: uppercase;
+  line-height: 80px;
+}
+
+.projetos-card-p1 {
+  color: #1a1a1a;
+
+  margin-top: 35px;
+
+  width: 512px;
+
+  font-size: 26px;
+  text-transform: uppercase;
+}
+
+.projetos-card-p2 {
+  margin-top: 60px;
+
+  font-size: 26px;
+
+  width: 590px;
+}
+
+.projetos-card-p2 a {
+  font-weight: bold;
+  text-decoration: underline;
+
+  color: #1a1a1a;
+
+  transition: .2s ease;
+}
+
+.projetos-card-p2 a:hover {
+  color: #FFFFFF;
+}
+
+.projetos-card-p2 span {
+  font-weight: bold;
+}
+
+.projetos-arrow-down {
+  margin-top: 80px;
+
+  cursor: pointer;
+
+  animation: projetos-arrow-down 1.2s ease alternate infinite;
+}
+
+@keyframes projetos-arrow-down {
+  from {
+    transform: translateY(51%);
+  }
+  to {
+    transform: translateY(11%);
+  }
+}
+
+.projetos-arrow-up {
+  cursor: pointer;
+
+  animation: projetos-arrow-up 1.2s ease alternate infinite;
+}
+
+@keyframes projetos-arrow-up {
+  from {
+    transform: translateY(-20%);
+  }
+  to {
+    transform: translateY(20%);
+  }
+}
+
+.vestuario-content .flyer-card {
+  display: flex;
+
+  width: 1320px;
+  height: 488px;
+  background-color: #C7B37D;
+
+  margin: 0px;
+  border-radius: 5px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.vestuario-content .flyer-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+
+  width: 1000px;
+}
+
+.flyer-card-title {
+  width: 482px;
+  
+  color: #FFFFFF;
+
+  font-size: 60px;
+  text-transform: uppercase;
+  line-height: 80px;
+}
+
+.flyer-card-p2 {
+  margin-top: 140px;
+}
+
+.vestuario-content .flyer-field-image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
+  height: 510px;
+  width: 700px;
+}
+
+.vestuario-container .letreiro-content {
+  height: 690px;
+}
+
+.letreiro-image {
+  margin-right: 20px;
+}
+
+.letreiro-card-p1 {
+  width: 530px;
+}
+
+.letreiro-card-p2 {
+  margin-top: 140px;
+}
+
+.show-content-projetos {
+  animation: show-content-projetos .8s forwards;
+}
+
+.extra-space {
+  margin-top: 14px;
+}
+
+@keyframes show-content-projetos {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hide-content-projetos {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.field-points {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  margin-left: 10px
+}
+
+.field-points .projetos-arrow-up, 
+.field-points .projetos-arrow-down {
+  display: none;
+}
+
 @media(max-width: 1400px) {
   .background {
     background-size: 380px;
@@ -290,7 +518,7 @@ body,
     width: 400px;
   }
   .home-container {
-    height: 76vh;
+    height: 72vh;
   }
   .home-container .field-home-logo {
     padding-bottom: 40px;
@@ -307,6 +535,154 @@ body,
   }
   .home-to-work {
     bottom: 48px;
+  }
+  .vestuario-container .vestuario-content {
+    height: 500px;
+  }
+  .vestuario-content .vestuario-title {
+    font-size: 46px;
+    margin: 0 0 20px 0;
+  }
+  .vestuario-content .vestuario-card {  
+    width: 700px;
+    height: 350px;
+    margin-left: 100px;
+  }
+  .vestuario-content .flyer-card {
+    width: 800px;
+    height: 350px;
+  }
+  .vestuario-content .flyer-card-content {
+    width: 860px;
+  }
+  .vestuario-content .flyer-card-title {
+    width: 340px;
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .vestuario-content .flyer-field-image  {
+    height: 360px;
+  }
+  .vestuario-content .flyer-field-image img {
+    width: 350px;
+  }
+  .vestuario-content .vestuario-field-image img {
+    width: 470px;
+  }
+  .vestuario-content .vestuario-field-image {
+    height: 370px;
+    width: 300px;
+  }
+  .vestuario-content .vestuario-card-content {
+    padding: 20px 0;
+  }
+  .projetos-card-title {
+    width: 300px;
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .projetos-card-p1 {  
+    margin-top: 35px;
+    font-size: 20px;
+    width: 320px;
+  }
+  .projetos-card-p2 {
+    margin-top: 50px;
+    width: 330px;
+    font-size: 20px;
+  }
+  .projetos-arrow-down {
+    margin-top: 40px;
+  }
+  .projetos-arrow-up {
+    margin-bottom: 10px;
+  }
+  .vestuario-content .vestuario-field-image .letreiro-image {
+    width: 390px;
+  }
+  .letreiro-content {
+    padding-bottom: 70px;
+  }
+  .vestuario-container .extra-space {
+    height: 510px;
+  }
+  .letreiro-card-p2, .flyer-card-p2 {
+    margin-top: 70px;
+  }
+}
+
+@media(max-width: 1100px) {
+  .vestuario-content .vestuario-card {  
+    width: 600px;
+    height: 320px;
+    margin-left: 110px;
+  }
+  .projetos-card-title {
+    width: 280px;
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .projetos-card-p1 {  
+    margin-top: 35px;
+    font-size: 18px;
+    width: 340px;
+  }
+  .projetos-card-p2 {
+    margin-top: 50px;
+    width: 280px;
+    font-size: 18px;
+  }
+  .vestuario-content .vestuario-field-image .letreiro-image {
+    width: 360px;
+  }
+  .vestuario-content .vestuario-field-image img {
+    width: 424px;
+  }
+  .vestuario-content .vestuario-field-image {
+    height: 334px;
+    width: 290px;
+  }
+  .vestuario-content .flyer-card {
+    width: 680px;
+    height: 320px;
+    margin-left: 30px;
+  }
+  .vestuario-content .flyer-card-content {
+    width: 900px;
+  }
+  .vestuario-content .flyer-card-title {
+    width: 340px;
+    font-size: 36px;
+    line-height: 50px;
+  }
+  .vestuario-content .flyer-field-image  {
+    height: 330px;
+  }
+  .vestuario-content .flyer-field-image img {
+    width: 305px;
+  }
+  .projetos-arrow-up, .projetos-arrow-down {
+    opacity: 0;
+  }
+  .field-points .projetos-arrow-up, 
+  .field-points .projetos-arrow-down {
+    display: block;
+    opacity: 1;
+    margin: 0;
+  }
+  .field-points .fp1-v {
+    margin-top: 60px;
+  }
+  .field-points .fp3-v,
+  .field-points .fp3-f {
+    margin-bottom: 30px;
+  }
+  .field-points .fp1-f,
+  .field-points .fp1-l {
+    margin-top: 30px;
+  }
+  .field-points .fp3-l {
+    margin-bottom: 60px;
   }
 }
 
@@ -333,6 +709,69 @@ body,
   }
   .field-logo-smoke img {
     width: 370px;
+  }
+  .vestuario-container .vestuario-content {
+    height: 800px;
+  }
+  .vestuario-content .vestuario-title {
+    margin: 0 25px 100px 0;
+  }
+  .vestuario-content .vestuario-card {  
+    width: 340px;
+    height: 600px;
+    margin-left: 20px;
+    align-items: center;
+    flex-direction: column;
+  }
+  .vestuario-content .vestuario-field-image .letreiro-image {
+    width: 371px;
+  }
+  .vestuario-content .vestuario-field-image img {
+    width: 410px;
+  }
+  .vestuario-content .vestuario-field-image {
+    height: 180px;
+    width: 420px;
+  }
+  .projetos-card-title {
+    margin: 80px 0 0 10px;
+    font-size: 36px;
+    line-height: 44px;
+    width: 200px;
+  }
+  .projetos-card-p1 {  
+    margin: 35px 0 0 10px;
+    font-size: 18px;
+    width: 290px;
+  }
+  .projetos-card-p2 {
+    margin: 50px 0 0 10px;
+    width: 260px;
+    font-size: 18px;
+  }
+  .vestuario-content .flyer-card {
+    width: 340px;
+    height: 600px;
+
+    margin-left: 20px;
+
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .vestuario-content .flyer-card-content {
+    width: 300px;
+  }
+  .vestuario-content .flyer-card-title {
+    width: 340px;
+    font-size: 36px;
+    line-height: 50px;
+  }
+  .vestuario-content .flyer-field-image  {
+    height: 330px;
+    width: 294px;
+  }
+  .vestuario-content .flyer-field-image img {
+    width: 305px;
   }
 }
 
@@ -394,6 +833,72 @@ body,
   .field-logo-smoke img {
     width: 250px;
   }
+  .vestuario-content .vestuario-title {
+    margin: 30px 0 80px 0;
+  }
+  .vestuario-content .vestuario-card { 
+    height: 520px;
+    width: 246px;
+  }
+  .vestuario-content .vestuario-card-l {
+    height: 490px;
+  }
+  .vestuario-content .vestuario-card-content {
+    width: 240px;
+  }
+  .vestuario-content .vestuario-field-image .letreiro-image {
+    width: 250px;
+    margin-right: 10px;
+    padding-right: 10px;
+  }
+  .vestuario-content .vestuario-field-image img {
+    width: 280px;
+  }
+  .vestuario-content .vestuario-field-image {
+    height: 130px;
+    width: 287px;
+  }
+  .projetos-card-title {
+    margin: 40px 0 0 10px;
+    font-size: 28px;
+    line-height: 44px;
+    width: 180px;
+  }
+  .projetos-card-p1 {  
+    margin: 35px 0 0 10px;
+    font-size: 18px;
+    width: 230px;
+  }
+  .projetos-card-p2 {
+    margin: 50px 0 0 10px;
+    width: 220px;
+    font-size: 18px;
+  }
+  .vestuario-content .flyer-card {
+    width: 246px;
+    height: 525px;
+    margin-left: 20px;
+  }
+  .vestuario-content .flyer-card-content {
+    width: 250px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .vestuario-content .flyer-card-title {
+    width: 230px;
+    font-size: 28px;
+    line-height: 44px;
+  }
+  .vestuario-content .flyer-field-image  {
+    height: 400px;
+    width: 230px;
+  }
+  .vestuario-content .flyer-field-image img {
+    width: 240px;
+  }
+  .field-points {
+    margin-left: 10px;
+  }
 }
 
 @media(max-width: 380px) {
@@ -416,5 +921,8 @@ body,
   }
   .home-to-work a {
     font-size: 14px;
+  }
+  .field-points {
+    margin: 0 4px 0 4px;
   }
 }
