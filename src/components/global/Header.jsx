@@ -6,7 +6,6 @@ import logo from '../../assets/logo.svg';
 
 export default function Header() {
   return (
-    <div style={{display: 'block'}}>
     <div className='header'>
       <div className='left-header'>
         <div className='field-logo'>
@@ -26,7 +25,6 @@ export default function Header() {
         <AiOutlineInstagram/>
         </a>
       </div>
-    </div>
     </div>
   );
 };

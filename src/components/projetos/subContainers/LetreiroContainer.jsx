@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import letreiro from '../../../assets/letreiro.png';
-import arrowUp from '../../../assets/arrow-up.svg';
+import arrowBack from '../../../assets/arrow-back.svg';
+import arrowGo from '../../../assets/arrow-g-gray.svg';
 
 import FlyerContainer from './FlyerContainer.jsx';
 
@@ -15,7 +16,6 @@ export default function LetreiroContainer() {
       <div id='all-content' className='show-content-projetos'>
         <div className='vestuario-container'>
           <div className='vestuario-content letreiro-content'>
-            <img className='projetos-arrow-up' onClick={LtoF} src={arrowUp} alt='arrow'/>
             <h1 className='vestuario-title show-content-projetos'>Letreiros</h1>
             <div className='field-card-projetos'>
               <div className='vestuario-card vestuario-card-l'>
@@ -31,13 +31,16 @@ export default function LetreiroContainer() {
                     Entre em contato</Link> para fazer seu <span>orçamento</span>!</p>
                 </div> 
               </div>
-              <div className='field-points'>
-                <img className='projetos-arrow-up lateral-arrow'  
-                onClick={LtoF} src={arrowUp} alt='arrow'/>
-                <span className='fp1-l' style={{color: '#959698'}}>●</span>
-                <span style={{color: '#959698'}}>●</span>
-                <span className='fp3-l' style={{color: '#FFF'}}>●</span>
-              </div>
+            </div>
+            <div className='field-points'>
+              <img className='projetos-arrow-up lateral-arrow'  
+              onClick={LtoF} src={arrowBack} alt='arrow'/>
+              <span className='fp1-l' style={{color: '#959698'}}>●</span>
+              <span style={{color: '#959698'}}>●</span>
+              <span className='fp3-l' style={{color: '#FFF'}}>●</span>
+              <img className='projetos-arrow-down lateral-arrow'
+              style={{cursor: 'auto', animation: 'none'}}
+              src={arrowGo} alt='arrow'/>
             </div>
           </div>
         </div>

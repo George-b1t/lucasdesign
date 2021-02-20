@@ -13,6 +13,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
 }
 
 html,
@@ -20,29 +21,6 @@ body,
 #root {
   width: 100%;
   height: 100%;
-}
-
-.background {
-  width: 100%;
-  height: 100%;
-
-  background: url(../assets/logo.svg);
-  background-size: 500px;
-  background-color: #1a1a1a;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  z-index: -10;
-
-  position: fixed;
-}
-
-.field-background-image {
-  width: 100%;
-  height: 100%;
-
-  opacity: .92;
-
   background-color: #1a1a1a;
 }
 
@@ -51,6 +29,8 @@ body,
   height: 120px;
 
   margin: 0 auto;
+
+  z-index: 1;
 
   display: flex;
   align-items: center;
@@ -278,7 +258,7 @@ body,
   align-items: center;
   justify-content: center;
 
-  height: 800px;
+  height: 740px;
 }
 
 .vestuario-content .vestuario-title {
@@ -304,7 +284,6 @@ body,
   height: 488px;
   background-color: #C7B37D;
 
-  margin-left: 140px;
   border-radius: 5px;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -370,8 +349,7 @@ body,
 }
 
 .projetos-arrow-down {
-  margin-top: 80px;
-
+  margin: 8px 0 0 20px;
   cursor: pointer;
 
   animation: projetos-arrow-down 1.2s ease alternate infinite;
@@ -379,14 +357,15 @@ body,
 
 @keyframes projetos-arrow-down {
   from {
-    transform: translateY(51%);
+    transform: translateX(-20%);
   }
   to {
-    transform: translateY(11%);
+    transform: translateX(20%);
   }
 }
 
 .projetos-arrow-up {
+  margin: 8px 20px 0 0;
   cursor: pointer;
 
   animation: projetos-arrow-up 1.2s ease alternate infinite;
@@ -394,10 +373,10 @@ body,
 
 @keyframes projetos-arrow-up {
   from {
-    transform: translateY(-20%);
+    transform: translateX(20%);
   }
   to {
-    transform: translateY(20%);
+    transform: translateX(-20%);
   }
 }
 
@@ -447,7 +426,7 @@ body,
 }
 
 .vestuario-container .letreiro-content {
-  height: 690px;
+  height: 769px;
 }
 
 .letreiro-image {
@@ -490,14 +469,144 @@ body,
 
 .field-points {
   display: flex; 
-  flex-direction: column; 
+  flex-direction: row; 
   align-items: center; 
-  margin-left: 10px
+  margin-top: 20px;
 }
 
-.field-points .projetos-arrow-up, 
-.field-points .projetos-arrow-down {
-  display: none;
+.vestuario-container .flyer-container {
+  height: 769px;
+}
+
+.contato-container {
+  width: 100%;
+  height: 780px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contato-title {
+  color: #C7B37D;
+
+  font-size: 60px;
+  text-transform: uppercase;
+
+  margin: 0 0 45px 0;
+}
+
+.contato-card {
+  width: 920px;
+  height: 550px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 5px;
+
+  background-color: #C7B37D;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.contato-card-title {
+  margin-top: 69px;
+
+  width: 785px;
+
+  font-size: 56px;
+}
+
+.contato-field-content {
+  width: 571px;
+  height: 150px;
+
+  margin-top: 88px;
+
+  display: flex;
+  align-items: center;
+}
+
+.contato-field-whatsapp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contato-field-whatsapp h1 {
+  font-size: 40px;
+}
+
+.contato-field-whatsapp a {
+  width: 240px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+
+  margin-top: 16px;
+
+  color: #FFFFFF;
+  background-color: #1a1a1a;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  transition: transform .4s ease;
+}
+
+.contato-field-instagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contato-field-instagram h1 {
+  font-size: 40px;
+}
+
+.contato-field-instagram a {
+  width: 240px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+
+  margin-top: 16px;
+
+  color: #FFFFFF;
+  background-color: #1a1a1a;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  transition: .4s ease;
+}
+
+.contato-div-sep {
+  margin: 0 45px 0 45px;
+
+  width: 2px;
+  height: 100%;
+
+  background-color: #1a1a1a;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.contato-field-whatsapp a:hover {
+  background-color: #128c7e;
+
+  transform: scale(1.03);
+}
+.contato-field-instagram a:hover {
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+
+  transform: scale(1.03);
 }
 
 @media(max-width: 1400px) {
@@ -537,7 +646,7 @@ body,
     bottom: 48px;
   }
   .vestuario-container .vestuario-content {
-    height: 500px;
+    height: 472px;
   }
   .vestuario-content .vestuario-title {
     font-size: 46px;
@@ -546,7 +655,6 @@ body,
   .vestuario-content .vestuario-card {  
     width: 700px;
     height: 350px;
-    margin-left: 100px;
   }
   .vestuario-content .flyer-card {
     width: 800px;
@@ -561,10 +669,10 @@ body,
     line-height: 50px;
   }
   .vestuario-content .flyer-field-image  {
-    height: 360px;
+    height: 370px;
   }
   .vestuario-content .flyer-field-image img {
-    width: 350px;
+    width: 340px;
   }
   .vestuario-content .vestuario-field-image img {
     width: 470px;
@@ -591,23 +699,60 @@ body,
     width: 330px;
     font-size: 20px;
   }
-  .projetos-arrow-down {
-    margin-top: 40px;
-  }
-  .projetos-arrow-up {
-    margin-bottom: 10px;
-  }
   .vestuario-content .vestuario-field-image .letreiro-image {
     width: 390px;
   }
-  .letreiro-content {
-    padding-bottom: 70px;
-  }
-  .vestuario-container .extra-space {
-    height: 510px;
-  }
   .letreiro-card-p2, .flyer-card-p2 {
     margin-top: 70px;
+  }
+  .vestuario-container .flyer-container {
+    height: 500px;
+  }
+  .vestuario-container .letreiro-content {
+    height: 500px;
+  }
+  .contato-container {
+    width: 100%;
+    height: 500px;
+  }
+  .contato-title {
+    color: #C7B37D;
+    font-size: 46px;
+    margin: 0 0 30px 0;
+  }
+  .contato-card {
+    width: 700px;
+    height: 400px;
+    border-radius: 5px;
+  }
+  .contato-card-title {
+    margin-top: 45px;
+    width: 561px;
+    font-size: 40px;
+  }
+  .contato-field-content {
+    width: 571px;
+    height: 150px;
+    margin-top: 60px;
+  }
+  .contato-field-whatsapp h1 {
+    font-size: 36px;
+  }
+  .contato-field-whatsapp a {
+    width: 240px;
+    height: 60px;
+    margin-top: 16px;
+  }
+  .contato-field-instagram h1 {
+    font-size: 36px;
+  }
+  .contato-field-instagram a {
+    width: 240px;
+    height: 60px;  
+    margin-top: 16px;
+  }
+  .contato-div-sep {
+    margin: 0 45px 0 45px;
   }
 }
 
@@ -615,7 +760,6 @@ body,
   .vestuario-content .vestuario-card {  
     width: 600px;
     height: 320px;
-    margin-left: 110px;
   }
   .projetos-card-title {
     width: 280px;
@@ -645,7 +789,6 @@ body,
   .vestuario-content .flyer-card {
     width: 680px;
     height: 320px;
-    margin-left: 30px;
   }
   .vestuario-content .flyer-card-content {
     width: 900px;
@@ -660,29 +803,6 @@ body,
   }
   .vestuario-content .flyer-field-image img {
     width: 305px;
-  }
-  .projetos-arrow-up, .projetos-arrow-down {
-    opacity: 0;
-  }
-  .field-points .projetos-arrow-up, 
-  .field-points .projetos-arrow-down {
-    display: block;
-    opacity: 1;
-    margin: 0;
-  }
-  .field-points .fp1-v {
-    margin-top: 60px;
-  }
-  .field-points .fp3-v,
-  .field-points .fp3-f {
-    margin-bottom: 30px;
-  }
-  .field-points .fp1-f,
-  .field-points .fp1-l {
-    margin-top: 30px;
-  }
-  .field-points .fp3-l {
-    margin-bottom: 60px;
   }
 }
 
@@ -713,18 +833,21 @@ body,
   .vestuario-container .vestuario-content {
     height: 800px;
   }
+  .vestuario-container .flyer-container {
+    height: 825px;
+  }
   .vestuario-content .vestuario-title {
-    margin: 0 25px 100px 0;
+    margin: 0 0 100px 0;
   }
   .vestuario-content .vestuario-card {  
     width: 340px;
     height: 600px;
-    margin-left: 20px;
     align-items: center;
     flex-direction: column;
   }
   .vestuario-content .vestuario-field-image .letreiro-image {
-    width: 371px;
+    width: 350px;
+    padding: 0 18px 0 0 ;
   }
   .vestuario-content .vestuario-field-image img {
     width: 410px;
@@ -753,8 +876,6 @@ body,
     width: 340px;
     height: 600px;
 
-    margin-left: 20px;
-
     align-items: center;
     flex-direction: column-reverse;
   }
@@ -772,6 +893,52 @@ body,
   }
   .vestuario-content .flyer-field-image img {
     width: 305px;
+  }
+  .contato-container {
+    width: 100%;
+    height: 450px;
+  }
+  .contato-title {
+    color: #C7B37D;
+    font-size: 46px;
+    margin: 0 0 30px 0;
+  }
+  .contato-card {
+    width: 500px;
+    height: 350px;
+    border-radius: 5px;
+  }
+  .contato-card-title {
+    margin-top: 30px;
+    width: 449px;
+    font-size: 32px;
+  }
+  .contato-field-content {
+    width: 455px;
+    height: 150px;
+    margin-top: 50px;
+    
+    display: flex;
+    justify-content: center;
+  }
+  .contato-field-whatsapp h1 {
+    font-size: 30px;
+  }
+  .contato-field-whatsapp a {
+    width: 200px;
+    height: 60px;
+    margin-top: 16px;
+  }
+  .contato-field-instagram h1 {
+    font-size: 30px;
+  }
+  .contato-field-instagram a {
+    width: 200px;
+    height: 60px;  
+    margin-top: 16px;
+  }
+  .contato-div-sep {
+    margin: 0 20px 0 20px;
   }
 }
 
@@ -798,6 +965,49 @@ body,
   }
   .field-logo-smoke img {
     width: 300px;
+  }
+  .contato-container {
+    width: 100%;
+    height: 450px;
+  }
+  .contato-title {
+    color: #C7B37D;
+    font-size: 46px;
+    margin: 0 0 30px 0;
+  }
+  .contato-card {
+    width: 100%;
+    height: 320px;
+    border-radius: 0;
+  }
+  .contato-card-title {
+    margin-top: 30px;
+    width: 421px;
+    font-size: 30px;
+  }
+  .contato-field-content {
+    width: 380px;
+    height: 150px;
+    margin-top: 40px;
+  }
+  .contato-field-whatsapp h1 {
+    font-size: 28px;
+  }
+  .contato-field-whatsapp a {
+    width: 160px;
+    height: 55px;
+    margin-top: 16px;
+  }
+  .contato-field-instagram h1 {
+    font-size: 28px;
+  }
+  .contato-field-instagram a {
+    width: 160px;
+    height: 55px;  
+    margin-top: 16px;
+  }
+  .contato-div-sep {
+    margin: 0 20px 0 20px;
   }
 }
 
@@ -838,18 +1048,18 @@ body,
   }
   .vestuario-content .vestuario-card { 
     height: 520px;
-    width: 246px;
+    width: 300px;
   }
   .vestuario-content .vestuario-card-l {
     height: 490px;
   }
   .vestuario-content .vestuario-card-content {
-    width: 240px;
+    width: 300px;
   }
   .vestuario-content .vestuario-field-image .letreiro-image {
-    width: 250px;
-    margin-right: 10px;
-    padding-right: 10px;
+    width: 280px;
+    padding-left: 20px;
+    margin-right: 0px;
   }
   .vestuario-content .vestuario-field-image img {
     width: 280px;
@@ -859,45 +1069,59 @@ body,
     width: 287px;
   }
   .projetos-card-title {
-    margin: 40px 0 0 10px;
+    margin: 40px 0 0 20px;
     font-size: 28px;
     line-height: 44px;
     width: 180px;
   }
   .projetos-card-p1 {  
-    margin: 35px 0 0 10px;
-    font-size: 18px;
-    width: 230px;
+    margin: 35px 0 0 20px;
+    font-size: 17px;
+    width: 260px;
   }
   .projetos-card-p2 {
-    margin: 50px 0 0 10px;
-    width: 220px;
-    font-size: 18px;
+    margin: 60px 0 0 20px;
+    width: 270px;
+    font-size: 17px;
   }
   .vestuario-content .flyer-card {
-    width: 246px;
+    width: 300px;
     height: 525px;
-    margin-left: 20px;
   }
   .vestuario-content .flyer-card-content {
-    width: 250px;
+    width: 270px;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
   }
   .vestuario-content .flyer-card-title {
     width: 230px;
     font-size: 28px;
     line-height: 44px;
   }
-  .vestuario-content .flyer-field-image  {
+  .vestuario-content .flyer-field-image {
     height: 400px;
     width: 230px;
   }
   .vestuario-content .flyer-field-image img {
     width: 240px;
   }
-  .field-points {
-    margin-left: 10px;
+  .contato-container {
+    width: 100%;
+    height: 530px;
+  }
+  .contato-title {
+    color: #C7B37D;
+    font-size: 46px;
+    margin: 0 0 26px 0;
+  }
+  .contato-card {
+    width: 100%;
+    height: 320px;
+  }
+  .contato-card-title {
+    margin-top: 30px;
+    width: 365px;
+    font-size: 26px;
   }
 }
 
@@ -916,6 +1140,13 @@ body,
     padding-left: 14px;
     width: 200px;
   }
+  .vestuario-content .flyer-field-image {
+    height: 215px;
+    width: 250px;
+  }
+  .vestuario-content .flyer-field-image img {
+    width: 260px;
+  }
   .field-logo-smoke img {
     width: 200px;
   }
@@ -923,6 +1154,43 @@ body,
     font-size: 14px;
   }
   .field-points {
-    margin: 0 4px 0 4px;
+    margin: 20px 0 20px 0;
+  }
+  .contato-container{
+    height: 470px;
+  }
+  .contato-card {
+    width: 100%;
+    height: 260px;
+  }
+  .contato-card-title {
+    margin-top: 30px;
+    width: 309px;
+    font-size: 22px;
+  }
+  .contato-field-content {
+    width: 320px;
+    height: 120px;
+    margin-top: 30px;
+  }
+  .contato-field-whatsapp h1 {
+    font-size: 24px;
+  }
+  .contato-field-whatsapp a {
+    width: 140px;
+    height: 55px;
+    margin-top: 16px;
+  }
+  .contato-field-instagram h1 {
+    font-size: 24px;
+  }
+  .contato-field-instagram a {
+    width: 140px;
+    height: 55px;  
+    margin-top: 16px;
+  }
+  .contato-div-sep {
+    margin: 0 10px 0 10px;
+    width: 1px;
   }
 }

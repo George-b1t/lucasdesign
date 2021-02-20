@@ -1,14 +1,14 @@
 import React from 'react';
 
 import Header from '../components/global/Header.jsx';
-import ProjetosContainer from 
-  '../components/projetos/ProjetosContainer.jsx';
+import ContatoContainer from 
+  '../components/contato/ContatoContainer.jsx';
 
 export default function Projetos() {
   return (
     <>
       <Header/>
-      <ProjetosContainer/>
+      <ContatoContainer/>
     </>
   );
 };

@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import camisa from '../../../assets/camisa.png';
-import arrowDown from '../../../assets/arrow-down.svg';
+import arrowGo from '../../../assets/arrow-go.svg';
+import arrowBack from '../../../assets/arrow-b-gray.svg';
 
 import FlyerContainer from './FlyerContainer.jsx';
 
@@ -36,15 +37,17 @@ export default function VestuarioContainer() {
                     Entre em contato</Link> para fazer seu <span>orçamento</span>!</p>
                 </div>
               </div>
+              </div>
               <div className='field-points'>
+                <img className='projetos-arrow-up' 
+                style={{cursor: 'auto', animation: 'none'}} 
+                src={arrowBack} alt='arrow'/>
                 <span className='fp1-v' style={{color: '#FFF'}}>●</span>
                 <span style={{color: '#959698'}}>●</span>
                 <span className='fp3-v' style={{color: '#959698'}}>●</span>
                 <img className='projetos-arrow-down' 
-                onClick={VtoF} src={arrowDown} alt='arrow'/>
+                onClick={VtoF} src={arrowGo} alt='arrow'/>
               </div>
-              </div>
-              <img className='projetos-arrow-down' onClick={VtoF} src={arrowDown} alt='arrow'/>
             </div>
           </div>
         </div>

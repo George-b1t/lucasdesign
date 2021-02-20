@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import flyer from '../../../assets/flyer.png';
-import arrowUp from '../../../assets/arrow-up.svg';
-import arrowDown from '../../../assets/arrow-down.svg';
+import arrowBack from '../../../assets/arrow-back.svg';
+import arrowGo from '../../../assets/arrow-go.svg';
 
 import VestuarioContainer from './VestuarioContainer.jsx';
 import LetreiroContainer from './LetreiroContainer.jsx';
@@ -15,8 +15,7 @@ export default function FlyerContainer() {
     setContent(
       <div id='all-content' className='show-content-projetos'>
         <div className='vestuario-container'>
-          <div className='vestuario-content'>
-            <img className='projetos-arrow-up' onClick={FtoV} src={arrowUp} alt='arrow'/>
+          <div className='vestuario-content flyer-container'>
             <h1 className='vestuario-title'>Flyers</h1>
             <div className='field-card-projetos'>
               <div className='flyer-card'>
@@ -24,7 +23,7 @@ export default function FlyerContainer() {
                   <h1 className='flyer-card-title'>
                     Flyers Profissionais
                   </h1>
-                  <p className='projetos-card-p1'>Traga personalidade ao se time</p>
+                  <p className='projetos-card-p1'>Traga personalidade ao seu time</p>
                   <p className='projetos-card-p2 flyer-card-p2'><Link to='/contato'>
                     Entre em contato</Link> para fazer seu <span>orçamento</span>!
                   </p>
@@ -33,19 +32,18 @@ export default function FlyerContainer() {
                   <img src={flyer} alt="camisa"/>
                 </div>
               </div>
-              <div className='field-points'>
-                <img
-                className='projetos-arrow-up' 
-                onClick={FtoV} src={arrowUp} alt='arrow'/>
-                <span className='fp1-f' style={{color: '#959698'}}>●</span>
-                <span style={{color: '#FFF'}}>●</span>
-                <span className='fp3-f' style={{color: '#959698'}}>●</span>
-                <img 
-                className='projetos-arrow-down' 
-                onClick={FtoL} src={arrowDown} alt='arrow'/>
-              </div>
             </div>
-            <img className='projetos-arrow-down' onClick={FtoL} src={arrowDown} alt='arrow'/>
+            <div className='field-points'>
+              <img
+              className='projetos-arrow-up' 
+              onClick={FtoV} src={arrowBack} alt='arrow'/>
+              <span className='fp1-f' style={{color: '#959698'}}>●</span>
+              <span style={{color: '#FFF'}}>●</span>
+              <span className='fp3-f' style={{color: '#959698'}}>●</span>
+              <img 
+              className='projetos-arrow-down' 
+              onClick={FtoL} src={arrowGo} alt='arrow'/>
+            </div>
           </div>
         </div>
       </div>
